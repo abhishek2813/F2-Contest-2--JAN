@@ -6,19 +6,19 @@ function chcekform(){
     var flag = false;
     if(name !="" && Profession !="" && age !=""){
         flag=true;
-        document.getElementById("success-msg").classList.remove("succuss")
+        document.getElementById("success-msg").classList.remove("success")
         document.getElementById("error-msg").classList.add("error")
         
     }else{
         document.getElementById("error-msg").classList.remove("error")
-        document.getElementById("success-msg").classList.add("succuss")
+        document.getElementById("success-msg").classList.add("success")
     }
-
-    let table=document.getElementById('data');
     if(flag){
-        document.getElementById("tab").classList.add("dis")
+       document.getElementById("tab").classList.add("dis")
         document.getElementById("data").classList.remove("success")
     }
+    let table=document.getElementById('data');
+  
         let newArray = ["Name :"+" "+name,"Profession"+" "+Profession,"Age"+" "+age,"Delete User"];
         newArray.forEach((item)=>{
             var li = document.createElement("li");
